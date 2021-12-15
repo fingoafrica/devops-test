@@ -27,10 +27,9 @@ jobs:
         if: always() # Pick up events even if the job fails or is canceled..
 
         #run automated unit tests and sonarcloud scan test
-        #
-        #
-        #
-        #
+      - id: tests
+        run: |
+            yarn test:ci
 
       #notify on slack success or failure
       - uses: 8398a7/action-slack@v3
